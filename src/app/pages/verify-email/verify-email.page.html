@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>verify-email</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <h2> Verify Email</h2>
+      <p class="ion-padding">
+        Please check your email to verfiy your email address.
+      </p>
+      
+      <ion-button type="submit"   color="dark" expand="block">
+        Resend Verification Email
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+  <div class="ion-padding-top ion-text-center">
+    <a routerLink="/login" class="register-link"> Verified email? <span class="sign-up">Sign in!</span></a>
+  </div>
+</ion-content>

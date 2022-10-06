@@ -1,0 +1,36 @@
+// ion-content .intro-page {
+//   --background: #ffffff;
+// }
+
+ion-slides {
+  height: 100%;
+  --bullet-background-active: rgb(0, 0, 0);
+  --bullet-background: rgb(97, 97, 97);
+}
+
+.slide-title {
+  font-weight: bold;
+  font-size: 180%;
+}
+
+.slide-description {
+  font-size: 16px;
+  color: gray;
+}
+
+.slide-img {
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.top-div {
+  height: 60%; 
+  background-color: lightgrey;
+  position: relative;
+}

@@ -1,0 +1,34 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1 class="login-title">Register</h1>
+    <p class="login-description">Enter your details to Register.</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+      <div class="ion-margin-top ion-margin-bottom">
+        <ion-item class="ion-margin-bottom" color="light">
+          <ion-label>Email</ion-label>
+          <ion-input [autofocus]="true" formControlName="email"required></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-label>Password</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        <!-- <div class="ion-text-right ion-margin-top ion-margin-bottom">
+          <a href="" class="forgot-link">Forgot your password?</a>
+        </div> -->
+        <ion-button type="submit" mode="ios" expand="block" color="dark" [disabled]="!registerForm.valid">Register</ion-button>
+      </div>
+    </form>
+    <div class="ion-padding-top ion-text-center">
+      <a routerLink="/login" class="register-link"> Have an account? <span class="sign-up">Sign in!</span></a>
+    </div>
+  </div>
+</ion-content>

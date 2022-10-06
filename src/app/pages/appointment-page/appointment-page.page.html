@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Schedule Appointment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content appParallaxHeader [scrollEvents]="true">
+  <form [formGroup]="appointmentForm" (ngSubmit)="submitForm(appointmentForm.value)">
+    <div>
+      <ion-list >
+        <ion-item lines="none">
+          <ion-label position="floating">Hospital Name</ion-label>
+          <ion-input formControlName="hospitalName"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="floating">Doctors Name</ion-label>
+          <ion-input formControlName="doctorsName"></ion-input>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-label position="floating">Patient Name</ion-label>
+          <ion-input formControlName="patientName"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="floating">Phone number</ion-label>
+          <ion-input formControlName="phoneNumber" inputmode="tel"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="floating">Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" formControlName="date"></ion-datetime>
+        </ion-item>
+      </ion-list>
+      <ion-row class="ion-justify-content-center">
+        <ion-button color="primary" type="submit">Schedule </ion-button>
+      </ion-row>
+    </div>
+  </form>
+</ion-content>

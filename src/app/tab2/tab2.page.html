@@ -1,0 +1,56 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+        Appointemnt
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content> -->
+
+<ion-content fullscreen>
+
+    <ion-list-header style="font-size: x-large;">
+      Appointments
+    </ion-list-header>
+    <div class="ion-margin-top">
+ 
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option color="danger" expandable> Delete </ion-item-option>
+        </ion-item-options>
+    
+        <ion-item *ngFor="let appointment of appointmentList ">
+          <ion-avatar slot="start">
+            <ngx-avatar [name]= "appointment.hospitalName" size="40"></ngx-avatar>
+          </ion-avatar>
+          <ion-label>
+           <h2>{{appointment.hospitalName}}</h2>
+            <h3>{{appointment.doctorsName}}</h3>
+          </ion-label>
+          <ion-badge slot="end" [color]="statusBadge(appointment)">pending</ion-badge>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="tertiary" expandable> Archive </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+  
+   </div>
+ 
+
+
+  
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" size="small">
+    <ion-fab-button (click)="openForm()">
+      <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

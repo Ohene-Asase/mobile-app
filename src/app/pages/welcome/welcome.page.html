@@ -1,0 +1,25 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main">
+    <div class="top">
+      <div class="top-content ion-padding ion-text-center">
+        <img src="assets/images/logo.png" alt="logo" class="welcome-logo">
+        <h1 class="welcome-title">Get your Health Under Control</h1>
+        <p class="welcome-description ion-margin-top">
+          Health is wealth
+        </p>
+      </div>
+    </div>
+    <div class="bottom ion-padding ion-text-center">
+      <ion-button mode="ios" expand="block" color="dark" (click)="toLoginPage()">Sign in</ion-button>
+      <ion-button (click)="toRegisterPage()" style="margin-top: 15px;" mode="ios" expand="block" color="dark" fill="outline">Create Account</ion-button>
+
+      <div class="stay-bottom ion-text-center">
+        <p>Powered by Rachman</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
